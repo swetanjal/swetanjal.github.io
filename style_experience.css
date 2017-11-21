@@ -82,7 +82,7 @@ body{
 	height: 48vw;
 }
 .Achievements{
-	background-image: url("https://scontent.fblr4-1.fna.fbcdn.net/v/t1.0-9/12417850_936810813076938_373184632554383432_n.jpg?oh=36da0c76d46c37ad02e6b2a3035a51b8&oe=5AAD063D");
+	background-image: url("./images/achievements.jpg");
 	
 }
 .Internships{
@@ -90,7 +90,7 @@ body{
 	height: 50vw;	
 }
 .Projects{
-	background-image: url("https://i.ytimg.com/vi/f9z-eKD2xjk/maxresdefault.jpg");
+	background-image: url("./images/projects.jpg");
 	height: 50vw;	
 }
 #Achievements_info{
