@@ -99,27 +99,22 @@
 			font-size: 1.5vw;
 			line-height: 3vw;
 		}
+		#Projects_info a{
+			color: white;
+		}
+		#next{
+			position: relative;
+			margin-top: 20%;
+			opacity: 0.5;
+			height: 6%;
+		}
+		#prev{
+			position: relative;
+			right: 53%;
+			opacity: 0.5;
+			height: 6%;
+		}
 	</style>
-	<script>
-		var cnt=0;
-		function set(){
-			document.getElementById("Projects_info").innerHTML = "Published a paper entitled Home Automation in the International Journal of Scientific Engineering and Research(IJSER).<br/>The main objective/aim of this IOT(Internet of Things) prototype is to save electricity by controlling electrical appliances using cell phone from any part of the world. Also the status of the electrical appliances can be received in the cell phone itself. This data can be used in many ways to save electricity.";
-		}
-		function update(){
-			if((cnt%3)==1){
-				document.getElementById("Projects_info").innerHTML = "Designed a handful of games using UNITY3D and also built patches for Flight Simulator X, EA Sports Cricket 07 and EA Sports Fifa 06.";
-			}
-			else if((cnt%3)==2){
-				document.getElementById("Projects_info").innerHTML = "Published a paper entitled Home Automation in the International Journal of Scientific Engineering and Research(IJSER).<br/>The main objective/aim of this IOT(Internet of Things) prototype is to save electricity by controlling electrical appliances using cell phone from any part of the world. Also the status of the electrical appliances can be received in the cell phone itself. This data can be used in many ways to save electricity.";
-			}
-			else
-			{
-				document.getElementById("Projects_info").innerHTML = "Built a software to make the process of keeping track of attendance of students easy and efficient.";
-			}
-			cnt=cnt+1;
-		}
-		setInterval(update,7000);
-	</script>
 </head>
 <body onload="set()">
 	<div class="headbar">
@@ -182,15 +177,45 @@
 	<div class="Projects backg">
 		<div class="content extra">
 			<div class="heading3 _heading">My Projects</div>
+			
 			<div id="Projects_info">
-				<!--Published a paper entitled ["Home Automation"] in the International Journal of Scientific Engineering and Research(IJSER).
+				Published a paper entitled <a href="https://www.ijser.org/onlineResearchPaperViewer.aspx?HOME-AUTOMATION.pdf" target="_blank">Home Automation</a> in the International Journal of Scientific Engineering and Research(IJSER).
 				<br/>
 				The main objective/aim of this IOT(Internet of Things) prototype is to save electricity by controlling electrical appliances using cell phone from any part of the world. Also the status of the electrical appliances can be received in the cell phone itself. This data can be used in many ways to save electricity.
-				-->
-				<!--Built a software to make the process of keeping track of attendance of students easy and efficient.
-				Designed a handful of games using UNITY3D and also built patches for Flight Simulator X, EA Sports Cricket 07 and EA Sports Fifa 06.-->
 			</div>
+			<button id="prev" onclick="prev()">&#10094;</button>
+			<button id="next" onclick="next()">&#10095;</button>
+			
 		</div>
 	</div>
 </body>
+<script>
+	var cnt=0;
+	var timer=null;
+	var flag_autoplay=1;
+	var A=["Published a paper entitled <a href='https://www.ijser.org/onlineResearchPaperViewer.aspx?HOME-AUTOMATION.pdf' target='_blank'>Home Automation</a> in the International Journal of Scientific Engineering and Research(IJSER).<br/>The main objective/aim of this IOT(Internet of Things) prototype is to save electricity by controlling electrical appliances using cell phone from any part of the world. Also the status of the electrical appliances can be received in the cell phone itself. This data can be used in many ways to save electricity.",
+		"Designed a handful of games using UNITY3D and also built patches for Flight Simulator X, EA Sports Cricket 07 and EA Sports Fifa 06.",
+		"Built a software to make the process of keeping track of attendance of students easy and efficient."]
+	function next(){
+		cnt=cnt+1;
+		
+		cnt=(cnt%A.length);
+		if(flag_autoplay==1){
+			window.clearInterval(timer);
+			timer=window.setInterval(next,7000);	
+		}
+		document.getElementById("Projects_info").innerHTML=A[cnt];
+	}
+	function prev(){
+		cnt=cnt-1;
+		if(cnt<0)cnt=cnt+3;
+		cnt=(cnt%A.length);
+		if(flag_autoplay==1){
+			window.clearInterval(timer);
+			timer=window.setInterval(next,7000);	
+		}
+		document.getElementById("Projects_info").innerHTML=A[cnt];	
+	}
+	timer=window.setInterval(next,7000);
+</script>
 </html>
