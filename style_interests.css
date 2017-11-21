@@ -1,0 +1,91 @@
+.content{
+	background-color: rgba(0,0,0,0.4);
+	font-size: 1.3vw;
+	color: white;
+	line-height: 2.0vw;
+	width: 50%;
+	font-style: unset;
+	margin-left: 24vw;
+	margin-top: 6.5vw;
+	margin-bottom: 4vw;
+	padding: 1.5vw;
+	border: 2px solid black;
+	border-radius: 2em;
+}
+.headbar{
+
+}
+#TEXT{
+	margin-left: 19%;
+}
+#background-headbar{
+	background-color: rgba(0,0,0,0.4);
+	height: 3.7vw;
+	width: 100%;
+	margin-left: 0px;
+}
+.heading111{
+	float: left;
+	color: white;
+	font-size: 1.45vw;
+	left: 19.0vw;
+	top: 0.9vw;
+	position: absolute;
+}
+.heading222{
+	float: left;
+	color: white;
+	font-size: 1.45vw;
+	left: 27.0vw;
+	top: 0.9vw;
+	position: absolute;	
+}
+.heading333{
+	float: left;
+	color: white;
+	font-size: 1.45vw;
+	left: 38.0vw;
+	top: 0.9vw;
+	position: absolute;	
+}
+.heading444{
+	float: left;
+	color: white;
+	font-size: 1.45vw;
+	left: 55.3vw;
+	top: 0.9vw;
+	position: absolute;	
+}
+.heading555{
+	float: left;
+	color: white;
+	font-size: 1.45vw;
+	left: 72.3vw;
+	top: 0.9vw;
+	position: absolute;	
+}
+li{
+	margin: 1.7vw;
+}
+body{
+	background-image: url("./images/notes.jpeg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;	
+	margin: 0px;
+}
+.heading111:hover{
+	font-weight: bold;
+}
+.heading222:hover{
+	font-weight: bold;
+}
+.heading333:hover{
+	font-weight: bold;
+}
+.heading444:hover{
+	font-weight: bold;
+}
+.heading555:hover{
+	font-weight: bold;
+}
