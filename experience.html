@@ -47,7 +47,8 @@
 			margin-left: 33.8vw;	
 		}
 		.heading3{
-			margin-left: 37.8vw;	
+			position: relative;
+			left: 38.8%;
 		}
 		.backg{
 			background-repeat: no-repeat;
@@ -92,27 +93,28 @@
 			margin-left: 0.3vw;
 		}
 		#Projects_info{
-			margin-top: 2%;
+			
 			float: left;
 			width: 45%;
-			margin-left: 27.85%;
+			
 			font-size: 1.5vw;
 			line-height: 3vw;
+			position: relative;
+			top: 20%;
+			left: 7.5%;
 		}
 		#Projects_info a{
 			color: white;
 		}
 		#next{
 			position: relative;
-			margin-top: 30vh;
-			opacity: 0.5;
-			height: 8vh;
+			top: 30%;
+			left: 10%;
 		}
 		#prev{
 			position: relative;
-			right: 53vw;
-			opacity: 0.5;
-			height: 8vh;
+			top: 30%;
+			right: 48.2%;
 		}
 	</style>
 </head>
@@ -182,10 +184,11 @@
 				Published a paper entitled <a href="https://www.ijser.org/onlineResearchPaperViewer.aspx?HOME-AUTOMATION.pdf" target="_blank">Home Automation</a> in the International Journal of Scientific Engineering and Research(IJSER).
 				<br/>
 				The main objective/aim of this IOT(Internet of Things) prototype is to save electricity by controlling electrical appliances using cell phone from any part of the world. Also the status of the electrical appliances can be received in the cell phone itself. This data can be used in many ways to save electricity.
+				
 			</div>
-			<button id="prev" onclick="prev()">&#10094;</button>
-			<button id="next" onclick="next()">&#10095;</button>
 			
+			<button id="next" onclick="next()">&#10095;</button>
+			<button id="prev" onclick="prev()">&#10094;</button>
 		</div>
 	</div>
 </body>
